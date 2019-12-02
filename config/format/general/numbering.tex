@@ -1,10 +1,10 @@
 \renewcommand*{\thesection}{\arabic{section}}
 
 \counterwithin*{figure}{section}
-\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
 
 \counterwithin*{table}{section}
-\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thetable}{\thechapter-\arabic{table}}
 
 \AtBeginDocument{\counterwithin*{lstlisting}{section}}
 \AtBeginDocument{\renewcommand{\thelstlisting}{\thesection.\arabic{lstlisting}}}

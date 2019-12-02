@@ -4,22 +4,22 @@
 % Update: https://github.com/TheNetAdmin/zjuthesis/releases
 
 \documentclass[
-    StudentName = 姓名,
-    StudentID   = 学号,
-    AdvisorName = 指导教师,
-    Grade       = 2014,            % only the year, no '级'
-    Major       = 专业,
-    Department  = 学院,
-    Title       = 毕业论文/设计题目,
+    StudentName = 何淂劲,
+    StudentID   = 21721081,
+    AdvisorName = 王锐,
+    Grade       = 2017,            % only the year, no '级'
+    Major       = 计算机科学与技术,
+    Department  = 计算机科学与技术学院,
+    Title       = 立体一致的轮廓线的实时绘制,
     SubmitDate  = 递交日期,
-    MajorFormat = general,
-    Degree      = undergraduate,   % 'undergraduate' or 'graduate'
+    MajorFormat = cs,
+    Degree      = graduate,   % 'undergraduate' or 'graduate'
     Type        = thesis,          % 'thesis'   or 'design' or 'equal'(only for graduate)
     Period      = final,           % 'proposal' or 'final'
     BlindReview = false,           % 'false'    or 'true'
     % Below only for 'graduate'
-    Topic           = 研究方向,
-    ColaboratorName = 合作导师
+    Topic           = 计算机图形学,
+    ColaboratorName = 王锐
 ]{config/zjuthesis}
 
 \newcommand{\inputfinal}
@@ -67,6 +67,8 @@
     \inputpage{title-eng}
     \inputpage{auth-claim}
     \cleardoublestylepage{cover}
+
+    \input{body/definition.tex}
     
     % Previous part
     \pagenumbering{Roman}
@@ -97,6 +99,10 @@
     \inputbody{post/ref}
     \inputbody{post/appendix}
     \inputbody{post/cv}
+}
+
+\DefineBibliographyStrings{english}{%
+    andothers = {等人}
 }
 
 \begin{document}
